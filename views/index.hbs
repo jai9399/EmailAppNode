@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="880887039131-i3kta39omo657ucei33achuormm2r8ta.apps.googleusercontent.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>-->
+    <title>EmailVerify</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="div1" class="pages1">
+        {{#if name}}
+    <div class="text2">
+        <span id="show">{{name}}</span>
+        <a href="/logout">Sign out</a>
+    </div>
+    {{else}}
+    <div class="text2">
+        <span id="show"></span>
+        <span id="singot"></span>
+    </div>
+    {{/if}}
+
+    <div class="text">
+        <span>I'm Jai</span>
+        <span>This is the E-mail Webapp</span>
+    </div>
+    </div>
+    <div id="div2" class="pages2">
+        <div class="login">
+            <h2>Login</h2>
+        <form action="/run" method="POST" target="_self">
+        <div class="fields">
+            <input type="text" placeholder="Username" name="username">
+         
+            <input type="password" placeholder="Password" name="password">
+
+        </div>   
+        <input type="submit" onclick="">
+        </form>
+        </div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <button class="Forgot">Forgot Password?</button>
+         {{#if erro}}
+                <div id="errors">
+                    {{erro}}
+                </div>
+                {{/if}}
+    </div>
+    
+    <div id="div3" class="pages3">
+            <div class="login">
+                    <h2>Sign Up</h2>
+                <form action="/register" method="POST" target="_self"> 
+                <div class="fields">
+                    <input type="text" placeholder="Username" name="username">
+                 
+                    <input type="password" placeholder="Password" name="password">
+                     
+                    <input type="email" placeholder="email" name="email">
+                </div>   
+                <input type="submit" onclick="myerror()">
+                
+                </form>
+                </div>  
+                {{#if err}}
+                <div id="errors">
+                    {{err}}
+                </div>
+                {{/if}}
+    </div>
+    <div class="hamburger">
+     <div></div>
+     <div></div>
+     <div></div>
+    </div>
+    <div id="menu">
+      <div class="links" onclick="myfunc(event)"><a href="#" id="1">Home</a></div>
+      <div class="links" onclick="myfunc(event)"><a href="#" id="2">Login</a></div>
+      <div class="links" onclick="myfunc(event)"><a href="#" id="3">Sign Up</a></div>   
+    </div>
+    <section id="fade">
+    </section>
+    <section id="fade2">
+        </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        var profile=''
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        displayName(profile.getName());
+        console.log('ID: ' + profile.getId()); 
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); 
+    }
+    </script>
+   
+    <script>
+      function displayName(name){
+          document.getElementById('show').innerHTML = "Welcome back , "+name;
+          document.getElementById('singot').innerHTML = "<a href='localhost:5000' onclick='signOut();''>Sign out</a>";
+      }
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+         document.getElementById('show').innerHTML='';
+        document.getElementById('singot').innerHTML = "";
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+    </script>
+    
+</body>
+</html>

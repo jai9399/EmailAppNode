@@ -1,0 +1,228 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: #2D3986;
+}
+.pages1 a{
+    font-size:20px;
+    letter-spacing: 0px;
+    color:white;
+    font-family: 'Bebas Neue', cursive;
+}
+.pages1{
+    box-sizing: border-box;
+    border: 10px white solid;
+    font-size:100px;
+    display: flex;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 20px;
+    color: white;
+    flex-wrap:wrap;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#show{
+    width: 100%;
+    font-size:20px;
+    text-decoration:0;
+    letter-spacing: 0px;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    text-align: left;
+    }
+.pages2{
+    box-sizing: border-box;
+    border: 10px white solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+   /*text-decoration: underline; */
+}
+.pages3{
+    box-sizing: border-box;
+    border: 10px white solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+   /*text-decoration: underline; */
+}
+.text{
+    margin-top:-200px;
+    display:flex;
+    text-shadow:10px 10px black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text2{
+    width:1000px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: right;
+    align-items: center;
+}
+.pages2 div h2{
+    margin:20px;
+}
+.pages3 div h2{
+    margin:20px;
+}
+.login{
+    display: flex;
+    font-size: 45px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 20px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height:300px;
+}
+ .login input{
+     background-color: #2D3986;
+     font-family: 'Bebas Neue', cursive;
+     letter-spacing: 4px;
+     width: 200px;
+     height:20px;
+     font-size:14px;
+     outline:none;
+     border: 1px white solid;
+     padding:10px;
+} 
+::placeholder{
+    color:white;
+}
+.fields{
+    padding-bottom: 30px;
+}
+
+.pages2 div input[type="submit"]{
+    height:40px;
+    padding:0px;
+    color: #2D3986;
+    font-size: 30px;
+    width:30%;
+    background-color: white;
+    box-shadow: 5px 5px black;
+}
+.Forgot{
+    margin-top:10px;
+    height:40px;
+    padding:0px;
+    font-family: 'Bebas Neue', cursive;
+    color: #2D3986;
+    font-size: 30px;
+    width:10%;
+    background-color: white;
+    box-shadow: 5px 5px black;
+}
+.pages3 div input[type="submit"]{
+    height:40px;
+    padding:0px;
+    color: #2D3986;
+    font-size: 30px;
+    width:30%;
+    background-color: white;
+    box-shadow: 5px 5px black;
+}  
+
+.pages2 div input[type="submit"]:focus{
+    box-shadow: none;
+    transition: all 1s;
+}
+.pages3 div input[type="submit"]:focus{
+    box-shadow: none;
+    transition: all 1s;
+}
+
+.pages3 div span{
+    text-decoration: none;
+    text-align:center;
+}
+.errors{
+    width:100px;
+}
+.pages2 div span{
+    text-decoration: none;
+    text-align:center;
+}
+.pages2 div input :focus{
+   text-decoration: none;
+   border : 0px;
+}
+.pages3 div input :focus{
+    text-decoration: none;
+    border : 0px;
+ }      
+ 
+#menu{
+    display:flex;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height:100vh;
+    width:200px;
+    top:0px;
+    right:10px;
+    background: black;
+    opacity: 0.80;
+    margin-top:0;
+}
+#menu div{
+    text-align: center;
+    font-size:25px;
+    opacity: 1;
+}
+#menu div a{
+   font-family: 'Bebas Neue', cursive;
+   opacity: 1;
+   text-decoration: none;
+   color:white;
+}
+#fade{
+    background-color: white;
+    z-index:5;
+    position: absolute;
+    height:10px;
+    width:100%;
+    top:0px;
+}
+#fade2{
+    background-color: white;
+    z-index:5;
+    position: absolute;
+    height:10px;
+    width:100%;
+    bottom:1px;
+}
+.remove{
+    display:none;
+}
+.hamburger{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width:80px;
+    top: 40px;
+    right:40px;
+    z-index:3;
+}
+.hamburger div{
+    width:30px;
+    height:5px;
+    margin: 2px;
+    background-color:black;
+}

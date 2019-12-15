@@ -14,12 +14,12 @@ var connection = mysql.createConnection({
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'jai9399@gmail.com',
-      pass: '290100mybday'
+      user: 'yourmailid',
+      pass: 'yourpassword'
     }
   });
   var mailOptions = {
-    from: 'jai9399@gmail.com',
+    from: 'yourmaidid',
     to: '',
     subject: 'Sending Email',
     text: 'Thanks For Logging In'
